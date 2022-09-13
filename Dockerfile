@@ -49,6 +49,8 @@ RUN sh Specify_unix_64.sh -q -dir /opt/Specify
 
 FROM dorowu/ubuntu-desktop-lxde-vnc as run
 
+RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4EB27DB2A3B88B8B
+
 RUN apt-get update && apt-get -y install --no-install-recommends \
   mysql-client
 
